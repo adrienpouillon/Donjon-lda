@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3E38D75F-D5B2-3BE5-191E-38831F504B4C}</ProjectGuid>
+    <ProjectGuid>{2EECB33E-DBF1-1BC7-8589-205AD9BCEEF8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -1431,43 +1431,43 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{35725BE9-076C-C875-1656-4DD3A895FAED}</Project>
+      <Project>{617AE08E-4D43-1874-2823-BDB3B42A02E8}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{AA93447B-8AD0-C70F-DD76-60382396921A}</Project>
+      <Project>{E816EB5E-5ADD-EAFE-CCD0-11FEA19CE9DC}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{F168D87D-8BCB-B11B-4018-E3AA06BF4D9C}</Project>
+      <Project>{B8951493-DC66-7061-B0E0-093446D86C4E}</Project>
       <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{E0DDA344-33A4-4BF8-735B-DBB79AFEC6FE}</Project>
+      <Project>{C6101612-839D-B57D-89D0-07FD7A2B6AD8}</Project>
       <Name>CFXRRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{ECA9F624-138B-0C34-1FB5-E8007A028485}</Project>
+      <Project>{EC48933C-8F1D-24ED-259E-7E879C762062}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Test.csproj">
-      <Project>{A14453BC-1644-A7A5-CAC8-71BAAE21C115}</Project>
+      <Project>{BD81B270-A729-CE96-5000-2FD4B6006FEE}</Project>
       <Name>NaughtyAttributes.Test</Name>
     </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
-      <Project>{13DD50B2-84D5-6FA8-99F1-EA5E927A6A38}</Project>
+      <Project>{9C44E1C0-B894-3619-E0E3-60B70225F7AB}</Project>
       <Name>CFXR.WelcomeScreen</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{E8703C52-E604-1BBE-A1CE-485394E7E7CF}</Project>
+      <Project>{B3758978-3B99-4EC8-8AA9-0137D8D37B3C}</Project>
       <Name>NaughtyAttributes.Core</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
-      <Project>{D2D32DBF-424A-9530-A8CE-3D948AF81F4F}</Project>
+      <Project>{274ECE3F-ED04-9B05-CA2B-B4E08E63953F}</Project>
       <Name>NaughtyAttributes.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="CFXREditor.csproj">
-      <Project>{B90FBF0C-E1AA-D5CA-FD11-60F0F209B944}</Project>
+      <Project>{0EB3EAE4-AD3A-F217-F329-40C49B2EF133}</Project>
       <Name>CFXREditor</Name>
     </ProjectReference>
   </ItemGroup>

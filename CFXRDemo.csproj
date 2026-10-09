@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ECA9F624-138B-0C34-1FB5-E8007A028485}</ProjectGuid>
+    <ProjectGuid>{EC48933C-8F1D-24ED-259E-7E879C762062}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>CFXRDemo</AssemblyName>
@@ -1176,11 +1176,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{E0DDA344-33A4-4BF8-735B-DBB79AFEC6FE}</Project>
+      <Project>{C6101612-839D-B57D-89D0-07FD7A2B6AD8}</Project>
       <Name>CFXRRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{F168D87D-8BCB-B11B-4018-E3AA06BF4D9C}</Project>
+      <Project>{B8951493-DC66-7061-B0E0-093446D86C4E}</Project>
       <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
