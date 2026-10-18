@@ -14,10 +14,12 @@ public class HealthComponent : MonoBehaviour
     void Start()
     {
         _coinInventory._onRecoltExpCoin += _life.DefaultHealth;
+        _coinInventory._onRecoltMuchExpCoin += _life.MaxHealth;
     }
 
     void OnDestroy()
     {
         _coinInventory._onRecoltExpCoin -= _life.DefaultHealth;
+        _coinInventory._onRecoltMuchExpCoin -= _life.MaxHealth;
     }
 }

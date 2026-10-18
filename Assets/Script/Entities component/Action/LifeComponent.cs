@@ -126,6 +126,13 @@ public class LifeComponent : MonoBehaviour
     }
 
     //Health function
+    public void MaxHealth()
+    {
+        _pv += _maxPv;
+        OnUpdateLife?.Invoke(_pv);
+        OnHealthAll?.Invoke(_pv);
+    }
+
     public void AllHealth()
     {
         _pv += _startPv;

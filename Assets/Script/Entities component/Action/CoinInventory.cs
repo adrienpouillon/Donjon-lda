@@ -1,10 +1,15 @@
 using System;
 using UnityEngine;
 using static coinType;
+using static UnityEngine.Rendering.DebugUI;
 
 public class coinInventory : MonoBehaviour
 {
     [Header("Config")]
+    [SerializeField] int _expMuchValue;
+    [SerializeField] int _rankMuchValue;
+    [SerializeField] int _ecuMuchValue;
+
     [SerializeField] bool _physicsProxyUseTrigger;
     [SerializeField] bool _physicsProxyUseCollider;
 
@@ -15,6 +20,9 @@ public class coinInventory : MonoBehaviour
     public event Action _onRecoltExpCoin;
     public event Action _onRecoltRankCoin;
     public event Action _onRecoltEcuCoin;
+    public event Action _onRecoltMuchExpCoin;
+    public event Action _onRecoltMuchRankCoin;
+    public event Action _onRecoltMuchEcuCoin;
 
     int _expQuantity;
     int _rankQuantity;
@@ -84,14 +92,26 @@ public class coinInventory : MonoBehaviour
                 case TypeCoin.expCoin:
                     _expQuantity += type.Value;
                     _onRecoltExpCoin?.Invoke();
+                    if(type.Value >= _expMuchValue)
+                    {
+                        _onRecoltMuchExpCoin?.Invoke();
+                    }
                     break;
                 case TypeCoin.rankCoin:
                     _rankQuantity += type.Value;
                     _onRecoltRankCoin?.Invoke();
+                    if (type.Value >= _rankMuchValue)
+                    {
+                        _onRecoltMuchRankCoin?.Invoke();
+                    }
                     break;
                 case TypeCoin.ecuCoin:
                     _ecuQuantity += type.Value;
                     _onRecoltEcuCoin?.Invoke();
+                    if (type.Value >= _ecuMuchValue)
+                    {
+                        _onRecoltMuchEcuCoin?.Invoke();
+                    }
                     break;
                 default:
                     break;
