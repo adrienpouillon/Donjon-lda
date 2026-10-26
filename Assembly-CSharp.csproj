@@ -73,6 +73,7 @@
     <Compile Include="Assets\Script\Documentation\ReadMeComponent.cs" />
     <Compile Include="Assets\Script\Entities component\Action\CoinInventory.cs" />
     <Compile Include="Assets\Script\Tag\ColliderTag.cs" />
+    <Compile Include="Assets\Script\UI\DoorUI.cs" />
     <Compile Include="Assets\Script\Documentation\ReadMeToBakeNavMech.cs" />
     <Compile Include="Assets\Script\Entities component\Action\Movement.cs" />
     <Compile Include="Assets\Script\Environment\OpenDoorScript.cs" />

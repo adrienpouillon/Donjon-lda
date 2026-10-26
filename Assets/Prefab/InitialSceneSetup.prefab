@@ -88,9 +88,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d300df1d242f4ae478435751e7fe5000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _maxcoinObjectif: 1700
+  _colordeath: {r: 1, g: 0, b: 0, a: 0}
   _deathText: You are Dead
-  _victoryText: You win
+  _coinWinObjectif: 6500
+  _typeCoinWinObjectif: 2
+  _colorWinObjectif: {r: 1, g: 0.9778552, b: 0, a: 0}
+  _winText: You are Win
+  _ecuCoinWinThousandPercentObjectif: 6500
+  _rankCoinWinThousandPercentObjectif: 114
+  _expCoinWinThousandPercentObjectif: 5900
+  _colorWinThousandPercentObjectif: {r: 0, g: 0.9384208, b: 1, a: 0}
+  _winThousandPercentText: You are Win 100 %
   _text: {fileID: 3756510151051051860}
   _life: {fileID: 4778462389275081047}
   _coin: {fileID: 6670484146950579242}
@@ -133,7 +141,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278255615
-  m_fontColor: {r: 1, g: 0.99997795, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

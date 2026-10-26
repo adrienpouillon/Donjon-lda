@@ -4,13 +4,31 @@ using Unity.VisualScripting;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static coinType;
 
 public class EndUiScript : MonoBehaviour
 {
     [Header("Config")]
-    [SerializeField] int _maxcoinObjectif;
+    [Header("Death")]
+    [SerializeField] Color _colordeath;
     [SerializeField] string _deathText;
-    [SerializeField] string _victoryText;
+
+    [Header("Win")]
+    [SerializeField] int _coinWinObjectif;
+    [SerializeField] TypeCoin _typeCoinWinObjectif;
+    [SerializeField] Color _colorWinObjectif;
+    [SerializeField] string _winText;
+
+    [Header("Win 100%")]
+    [SerializeField] int _ecuCoinWinThousandPercentObjectif;
+    [SerializeField] int _rankCoinWinThousandPercentObjectif;
+    [SerializeField] int _expCoinWinThousandPercentObjectif;
+    [SerializeField] Color _colorWinThousandPercentObjectif;
+    [SerializeField] string _winThousandPercentText;
+
+    
+    
+    
 
     [Header("Text Dependances")]
     [SerializeField] TextMeshProUGUI _text;
@@ -32,9 +50,10 @@ public class EndUiScript : MonoBehaviour
     }
     void Reset()
     {
-        _coin = GameObject.FindFirstObjectByType<coinInventory>();
+        _coin = FindFirstObjectByType<coinInventory>();
         _deathText = "You are dead";
-        _deathText = "You win";
+        _winText = "You win";
+        _winThousandPercentText = "You win";
     }
 
     void Update()
@@ -44,17 +63,45 @@ public class EndUiScript : MonoBehaviour
         {
             if (_life.IsDead())
             {
-                _text.color = Color.red;
+                _text.color = _colordeath;
                 _text.text = _deathText;
-                _isReloading = true; 
+                _isReloading = true;
                 _clock.ResetClock();
             }
-            else if (_coin.EcuQuantity >= _maxcoinObjectif)
+            else 
             {
-                _text.color = Color.yellow;
-                _text.text = _victoryText;
+                int coinWin = 0;
+                int ecuCoin = _coin.EcuQuantity;
+                int expCoin = _coin.ExpQuantity;
+                int rankCoin = _coin.RankQuantity;
+                switch (_typeCoinWinObjectif)
+                {
+                    case TypeCoin.ecuCoin:
+                        coinWin = ecuCoin;
+                        break;
+                    case TypeCoin.expCoin:
+                        coinWin = expCoin;
+                        break;
+                    case TypeCoin.rankCoin:
+                        coinWin = rankCoin;
+                        break;
+                }
+                if (ecuCoin >= _ecuCoinWinThousandPercentObjectif && expCoin >= _expCoinWinThousandPercentObjectif && rankCoin >= _rankCoinWinThousandPercentObjectif)
+                {
+                    _text.color = _colorWinThousandPercentObjectif;
+                    _text.text = _winThousandPercentText;
+                    Debug.Log("100%");
+                }
+                else if (coinWin >= _coinWinObjectif)
+                {
+                    _text.color = _colorWinObjectif;
+                    _text.text = _winText;
+                }
+                else
+                {
+                    _text.text = "";
+                }
             }
-            else _text.text = "";
         }
         else
         {

@@ -23,10 +23,11 @@ public class InteractDoor : Interact
     override protected void Interaction(Animator animator)
     {
         OpenDoorScript openDoorScript = animator.gameObject.GetComponent<OpenDoorScript>();
-        if (openDoorScript != null && _inventory.RankQuantity >= openDoorScript.rankCoinRequired)
+        if (openDoorScript != null && _inventory.RankQuantity >= openDoorScript.RankCoinRequired)
         {
             animator.SetBool(_nameActiveAnimator, true);
             _onOpenEvent?.Invoke();
+            openDoorScript.CanvasDoorSetActive(false);
         }
     }
 }
